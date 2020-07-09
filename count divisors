@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int i,r,k,count;
+	cin>>i>>r>>k;
+	for(int j=i;j<=r;j++)
+	{
+		if(j%k==0) count++;
+	}
+	cout<<count;
+}
