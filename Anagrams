@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int t=0;
+	cin>>t;
+	while(t!=0)
+	{
+		string a,b;
+		int count=0;
+		cin>>a;
+		cin>>b;
+		int alen=a.size();
+		int blen=b.size();
+		//if(alen>blen || alen==blen)
+		for(int i=0;i<alen;i++)
+		{
+			for(int j=0;j<blen;j++)
+			{
+				if(a[i]==b[j]) {b[j]=' '; count=count+1;break;}
+			}
+		}
+		/*else
+		{
+			for(int i=0;i<blen;i++)
+		{
+			for(int j=0;j<alen;j++)
+			{
+				if(a[i]==b[j]) {b[j]=' '; count=count+1;break;}
+			}
+		}
+		}*/
+		cout<<(alen+blen)-(count*2)<<"\n";
+		--t;
+	}
+}
