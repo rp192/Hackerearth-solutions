@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+int main ()
+{
+	string s;
+	cin>>s;
+	int len=s.length();
+	int p=len-1;
+	int count=0;
+	for(int i=0;i<len/2;i++,p--)
+	{
+		if(s[i]==s[p]) count++;
+	}
+	if(count==len/2) cout<<"YES";
+	else cout<<"NO";
+}
