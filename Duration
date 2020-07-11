@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+		ios_base::sync_with_stdio(false);
+	    cin.tie(NULL);
+	int t;
+	cin>>t;
+	while(t!=0)
+	{
+		int sh,sm,eh,em;
+		cin>>sh>>sm>>eh>>em;
+		int s=sh*60+sm;
+		int e=eh*60+em;
+		int d=e-s;
+		int dh,dm;
+		if(d>=60)
+		{
+			dh=d/60;
+			dm=d%60;
+		}else
+		{
+			dh=0;
+			dm=d;
+		}
+		cout<<dh<<" "<<dm<<"\n";
+		t--;
+	}
+}
