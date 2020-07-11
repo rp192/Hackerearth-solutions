@@ -1,0 +1,24 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	 ios_base::sync_with_stdio(false);
+	   cin.tie(NULL);
+	int t;
+	cin>>t;
+	//string s,d;
+	while(t!=0)
+	{
+		string s,d,f;
+		cin>>s>>d;
+		sort(s.begin(),s.end());
+		f=d;
+		sort(f.begin(),f.end());
+		int k=s.compare(f);
+		if(k==0) cout<<"YES"<<"\n";
+		else cout<<"NO"<<"\n";
+		t--;
+	}
+}
