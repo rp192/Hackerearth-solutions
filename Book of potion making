@@ -1,0 +1,24 @@
+#include<iostream>
+#include<sstream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	int a;
+	cin>>a;
+	int count=0;
+	int sum=0;
+	for(int i=10;i>0;--i)
+	{
+		int j=(int)(pow(10,i-1)+0.5);
+		int g=(a/j)%10;
+		sum=sum+(g*(i));
+		++count;
+	}
+	bool flag=false;
+	if(count==10) flag=true;
+	if(sum%11==0 && flag) cout<<"Legal ISBN";
+	else cout<<"Illegal ISBN";
+
+}
