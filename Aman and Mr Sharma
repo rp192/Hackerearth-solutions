@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int t,count;
+	cin>>t;
+	while(t!=0)
+	{
+		double r,x;
+		cin>>r>>x;
+		double  b=(x*100);
+		const double p=(double)22/7;
+		double a=(2*(p)*(r));
+		if(b>=(a)) count++;
+		--t;
+	}
+	cout<<count;
+}
