@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	 ios_base::sync_with_stdio(false);
+	 cin.tie(NULL);
+	long n,x;
+	cin>>n;
+	cin>>x;
+	for(long i=0;i<n;++i)
+	{
+		long y;
+		cin>>y;
+		if(y>=x) cout<<"YES"<<"\n";
+		else cout<<"NO"<<"\n";
+
+	} 
+}
