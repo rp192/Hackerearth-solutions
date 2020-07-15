@@ -1,0 +1,50 @@
+
+//This is the brute force solution (not prefferable)
+
+
+#include<iostream>
+#include<sstream>
+#include<string>
+using namespace std;
+
+int main()
+{
+	string s;
+	cin>>s;
+	bool flag=true,flag1;
+	int f=0,g=0;
+	if((s[2]=='A' || s[2]=='E' || s[2]=='I' || 
+		s[2]=='O' || s[2]=='U' || s[2]=='Y'))
+		{
+			flag=false;
+		}
+
+	for(int i=0;i<s.length()-1;++i)
+	{
+		if(i==1 || i==5)
+		{
+			i=i+1;
+			continue;
+		}
+		else{
+		char o=s[i];
+		char t=s[i+1];
+		string l(1,o);
+		string m(1,t);
+		stringstream oo(l);
+		stringstream tt(m);
+		oo>>f;
+		tt>>g;
+		if((f+g)%2==0) flag1=true;
+    else {flag1=false; break;}
+	}
+		}
+	
+	if((flag && flag1))
+	{
+		cout<<"valid";
+	}
+	else{
+		cout<<"invalid";
+	}
+}
