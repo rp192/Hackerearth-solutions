@@ -1,0 +1,29 @@
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+
+    int N = 0;
+    cin>>N;
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    long data[N],dd;
+    for(auto i=0; i<N; i++)
+    {
+        cin>>dd;
+        dd=dd%10;
+        data[i]=dd;
+    }
+    // write your code here
+    // ans = 
+    int sl,l;
+    sl=data[N-2];
+    l=data[N-1];
+    int ans=(sl*10)+l;
+    if(ans%10==0) cout<<"Yes";
+    else cout<<"No";
+    
+    return 0;
+}
